@@ -1,20 +1,25 @@
-#include <stdio.h>
+#include <main.h>
 
-int grid[16];
+int grid[16] = 
+	{
+		0,	0,	0,	0,
+		0,	0,	0,	0,
+		0,	0,	0,	0,
+		0,	0,	0,	0,
+	};
 
-void print_grid (void)
-{
-	int i = 0;
-	for (i = 0; i < 16; i++) {
-		printf ("%d\t", grid[i]);
-		if ((i + 1)%4 == 0)
-			printf ("\n");
-	}
-	printf ("\n");
-}
+// Temp grid to test the direction functions
+int tgrid[16] = 
+	{
+		2,	0,	2,	0,
+		0,	2,	0,	2,
+		2,	0,	2,	0,
+		0,	2,	0,	2
+	};
 
 int main (void)
 {
-	print_grid();
+	print_grid (grid);
+	print_grid (tgrid);
 	return 0;
 }
