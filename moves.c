@@ -1,7 +1,7 @@
 #include <moves.h>
 
 #define INROW (row, pos) (row == pos/4)
-#define INCOL (col, pos) (col == pos%4)
+#define INCOL (col, pos) ((col == pos%4) && (pos>=0) && (pos<=15))
 
 void left (int *grid)
 {
